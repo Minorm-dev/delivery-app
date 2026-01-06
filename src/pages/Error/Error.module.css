@@ -1,0 +1,340 @@
+.not-found-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+            radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+            radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+            radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0,0,0,0)),
+            radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+            radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
+            radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    animation: twinkle 5s infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+}
+
+.central-body {
+    text-align: center;
+    padding: 40px;
+    z-index: 2;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.planet {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+    animation: float 6s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px rgba(255, 107, 107, 0.5));
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.error-code {
+    font-size: 8rem;
+    font-weight: 900;
+    margin: 0;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.error-title {
+    font-size: 2.5rem;
+    color: #fff;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.error-message {
+    color: #b0b0d0;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.redirect-info {
+    margin: 25px 0;
+    color: #4ecdc4;
+    font-size: 1.1rem;
+}
+
+.countdown {
+    font-weight: bold;
+    color: #ff6b6b;
+    font-size: 1.3rem;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.buttons-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.home-button, .back-button {
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    text-decoration: none;
+}
+
+.home-button {
+    background: linear-gradient(45deg, #4ecdc4, #44a08d);
+    color: white;
+}
+
+.back-button {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.home-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(78, 205, 196, 0.3);
+    background: linear-gradient(45deg, #44a08d, #4ecdc4);
+}
+
+.back-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.button-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Астронавт */
+.astronaut-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.astronaut {
+    position: relative;
+    width: 120px;
+    height: 150px;
+    animation: astronaut-float 4s ease-in-out infinite;
+}
+
+@keyframes astronaut-float {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-15px) rotate(5deg); }
+}
+
+.helmet, .body, .left-arm, .right-arm, .left-leg, .right-leg {
+    position: absolute;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.helmet {
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 30px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #fff 0%, #e0e0e0 100%);
+}
+
+.body {
+    width: 70px;
+    height: 80px;
+    top: 55px;
+    left: 25px;
+}
+
+.left-arm, .right-arm {
+    width: 20px;
+    height: 50px;
+    top: 60px;
+}
+
+.left-arm {
+    left: 5px;
+    transform: rotate(30deg);
+    animation: left-arm-swing 2s infinite;
+}
+
+.right-arm {
+    right: 5px;
+    transform: rotate(-30deg);
+    animation: right-arm-swing 2s infinite 0.5s;
+}
+
+@keyframes left-arm-swing {
+    0%, 100% { transform: rotate(30deg); }
+    50% { transform: rotate(10deg); }
+}
+
+@keyframes right-arm-swing {
+    0%, 100% { transform: rotate(-30deg); }
+    50% { transform: rotate(-10deg); }
+}
+
+.left-leg, .right-leg {
+    width: 20px;
+    height: 50px;
+    top: 130px;
+}
+
+.left-leg {
+    left: 35px;
+    transform: rotate(20deg);
+}
+
+.right-leg {
+    right: 35px;
+    transform: rotate(-20deg);
+}
+
+/* Ракета */
+.objects {
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+}
+
+.object_rocket {
+    width: 80px;
+    height: 180px;
+    animation: rocket-move 20s linear infinite;
+}
+
+.rocket-body {
+    width: 40px;
+    height: 120px;
+    background: linear-gradient(#ff9966, #ff5e62);
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    margin: 0 auto;
+}
+
+.rocket-fin-left, .rocket-fin-right {
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 40px solid #ff5e62;
+}
+
+.rocket-fin-left {
+    left: -20px;
+    transform: rotate(30deg);
+}
+
+.rocket-fin-right {
+    right: -20px;
+    transform: rotate(-30deg);
+}
+
+.rocket-window {
+    width: 20px;
+    height: 20px;
+    background: #4ecdc4;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    left: 10px;
+}
+
+.rocket-fire {
+    width: 30px;
+    height: 60px;
+    background: linear-gradient(orange, red);
+    border-radius: 50%;
+    margin: 0 auto;
+    animation: fire-blast 0.5s infinite alternate;
+    filter: blur(5px);
+}
+
+@keyframes fire-blast {
+    0% { transform: scaleY(1); opacity: 0.8; }
+    100% { transform: scaleY(1.2); opacity: 1; }
+}
+
+@keyframes rocket-move {
+    0% { transform: translateY(0) rotate(15deg); }
+    100% { transform: translateY(-100vh) rotate(15deg); }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .central-body {
+        margin: 20px;
+        padding: 30px 20px;
+    }
+
+    .error-code {
+        font-size: 6rem;
+    }
+
+    .error-title {
+        font-size: 1.8rem;
+    }
+
+    .buttons-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-button, .back-button {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+
+    .objects {
+        display: none;
+    }
+}
