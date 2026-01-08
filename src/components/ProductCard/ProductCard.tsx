@@ -50,7 +50,6 @@ function ProductCard(props: ProductCardProps) {
                         {props.rating}&nbsp;★
                     </div>
 
-                    {/* Сообщение об успешном добавлении */}
                     {showSuccessMessage && (
                         <div className={styles['success-message']}>
                             ✓ Добавлено в корзину
