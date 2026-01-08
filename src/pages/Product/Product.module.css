@@ -1,0 +1,91 @@
+.product {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+    max-height: 500px;
+    border-radius: 12px;
+    border: 1px solid var(--separator-color);
+    object-fit: contain;
+}
+
+.details {
+    background-color: var(--white-color);
+    border-radius: 12px;
+    padding: 30px;
+    border: 1px solid var(--separator-color);
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.rating {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 25px;
+}
+
+.ingredients h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.ingredients p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-secondary-color);
+}
+
+.loading,
+.notFound {
+    text-align: center;
+    padding: 40px;
+    font-size: 1.2rem;
+    color: var(--text-secondary-color);
+}
+
+.error {
+    text-align: center;
+    padding: 40px;
+    color: var(--error-color);
+}
+
+.retryButton {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.retryButton:hover {
+    background-color: var(--primary-hover-color);
+}
